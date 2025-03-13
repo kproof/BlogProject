@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'gg9)n@dyq-l%kpk(h_l7e$zoy9jeyn(48hrj=xo*(xw)^m@v%g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False 
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','.rainclouds.site']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.zmrenwu.com','81.70.103.152']
 
 
 # Application definition

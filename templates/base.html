@@ -14,12 +14,71 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'blog/css/pace.css' %}"> 
     <link rel="stylesheet" href="{% static 'blog/css/custom.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <link rel="Shortcut Icon" href="favicon.ico">
+
+    <!-- 背景图片（需要修改：头部和侧边列表无法透明）-->
+    <!--style type="text/css">
+        body{
+            background: url("https://pic2.zhimg.com/v2-a360a3182e1b05282175505eeeb8cab5_b.webp") no-repeat center center fixed;
+                    /*兼容浏览器版本*/
+                    -webkit-background-size: cover;
+                    -o-background-size: cover;                
+                    background-size: cover;
+                    opacity: 0.5;
+        }
+        </style-->
     <!-- js -->
     <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
     <script src="{% static 'blog/js/pace.min.js' %}"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="{% static 'blog/js/modernizr.custom.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
     <link href="https://cdn.bootcss.com/highlight.js/9.15.8/styles/github.min.css" rel="stylesheet">
+    <meting-js server="netease" type="playlist" id="7360465359" mini=true fixed=true theme=#FFF0F5></meting-js>
+
+    <!--=script type="text/javascript">//樱花
+        var system ={}; 
+        var p = navigator.platform;
+        if( /Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
+        //手机不加载
+        }else{
+        $.getScript("https://cdn.zxz.ee/js/yinghua.js");
+        }
+    </script-->
+
+    <!-- 看板娘开始 -->
+    <!--link href='https://cdn.jsdelivr.net/gh/xiaoyanu/file-test@2021.12.1-2/kbn/pio.css' rel='stylesheet' type='text/css'/>
+    < 可选位置： left 或 right >
+    <div class="pio-container left">
+    <div class="pio-action"></div>
+    < 高度和宽度根据每个模型的不同 进行调整 >
+    <canvas id="pio" width="170" height="295"></canvas>
+    </div>
+    <script src='https://cdn.jsdelivr.net/gh/xiaoyanu/file-test@2021.12.1-2/kbn/l2d.js'></script>
+    <script src='https://cdn.jsdelivr.net/gh/xiaoyanu/file-test@2021.12.1-2/kbn/pio.js'></script>
+    <script>
+    var pio = new Paul_Pio({
+        "mode": "fixed",
+        "touch": ["点击提示文字在kbn/pio.js中修改"],
+        "hidden": false, //手机端是否隐藏
+        "referer": "?欢迎来自 %t 的朋友~",
+        "content": {
+            "welcome": "?欢迎来到本站！"
+        },
+        // 可用参数：
+        // "leimu" "1" "2" "kangna" "qingye" "shawu" "xiaomai" "zhinai"
+        
+        // 举例子：
+        // "model": ["https://cdn.jsdelivr.net/gh/xiaoyanu/file-test@2021.12.1/kbn/ 可修改参数位置 /model.json"],
+        
+        "model": ["https://cdn.jsdelivr.net/gh/xiaoyanu/file-test@2021.12.1/kbn/xiaomai/model.json"],
+        
+        "tips": true //如果设置为false则会优先显示welcome中的内容“欢迎~”
+    });
+    </script>
+    <看板娘结束 -->
 
     <style>
         .codehilite {
@@ -121,9 +180,9 @@
                 {% show_categories %}
                 {% show_tags %}
 
-                <div class="rss">
+                <!--div class="rss">
                     <a href=""><span class="ion-social-rss-outline"></span> RSS 订阅</a>
-                </div>
+                </div-->
             </aside>
         </div>
     </div>
@@ -132,10 +191,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p class="copyright">&copy 2017 - 采集自<a href="http://www.cssmoban.com/"
+                <!--p class="copyright">&copy 2017 - 采集自<a href="http://www.cssmoban.com/"
                                                         target="_blank" title="模板之家">模板之家</a>
                     - 由<a href="http://zmrenwu.com/" title="网页模板" target="_blank">追梦人物的博客</a>修改
-                </p>
+                </p-->
             </div>
         </div>
     </div>

@@ -61,6 +61,9 @@ class Post(models.Model):
     # 因为我们规定一篇文章只能有一个作者，而一个作者可能会写多篇文章，因此这是一对多的关联关系，和 
     # Category 类似。
     author = models.ForeignKey(User,verbose_name='作者', on_delete=models.CASCADE)
+
+    #阅读量统计
+    views = models.PositiveIntegerField(default=0, verbose_name='阅读量',editable=False)
     class Meta:
         verbose_name = '文章'
         verbose_name_plural = '文章'
@@ -83,3 +86,9 @@ class Post(models.Model):
         # 这里我们规定文章的 URL 规则为 /blog/<pk>/，其中 pk 是文章的主键。
         # 因此我们在这里定义了一个 get_absolute_url 方法，返回文章的 URL。
         return reverse('blog:detail', kwargs={'pk': self.pk})
+    
+    def increase_views(self):
+        self.views += 1
+        self.save(update_fields=['views'])
+    
+    
